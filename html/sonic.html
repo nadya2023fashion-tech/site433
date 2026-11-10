@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/sonic.css">
+    <script src="../js/sonic.js"></script>
+</head>
+
+<body>
+
+    <img src="../img/8490f0cab98f44a6e905a72cb61b72aa.gif" alt="font_sonic" class="sonic" id="main-sonic">
+
+    <img src="../img/8490f0cab98f44a6e905a72cb61b72aa.gif" alt="sonic_mushrooms" class="sonic_mushrooms"
+        id="sonic_mushrooms" onclick="runExistingSonic()">
+
+
+    <div class="eggman">
+        <img src="../img/Eggman-PNG-Picture.png" alt="эггман">
+    </div>
+
+
+    <div class="arrow">
+        <img src="../img/arrow.png" alt="arrow" onclick="runExistingSonic()">
+    </div>
+
+    <div class="mushrooms">
+        <img src="../img/mashrooms.png" alt="грибы" onclick="runExistingSonic()">
+    </div>
+
+
+    <center>
+
+
+
+        <div class="header">
+            <!-- Добавили класс sonic-container и тег span внутрь текста -->
+            <p class="sonic-container" onclick="playRutubeVideos()">
+                sonic
+                <span class="yellow-tooltip">Смотреть ролики</span>
+            </p>
+        </div>
+
+
+        <div class="content">
+            <div class="container1">
+                <img src="../img/img1.jpg" alt="sonic">
+            </div>
+            <div class="container2">
+                <img src="../img/img2.jpg" alt="sonic">
+            </div>
+            <div class="container3">
+                <img src="../img/img3.jpg" alt="sonic">
+            </div>
+            <div class="container4">
+                <img src="../img/img4.jpg" alt="sonic">
+            </div>
+        </div>
+
+        <div class="content2">
+            <div>
+                <iframe width="720" height="405" src="https://rutube.ru/play/embed/9edf2fc2c91f74527a89144521e3e1af/"
+                    style="border: none;" allow="clipboard-write; autoplay" allowFullScreen></iframe>
+            </div>
+            <div>
+                <iframe width="720" height="405" src="https://rutube.ru/play/embed/3955ded3e2e66bc4d89d27ab61867297/"
+                    style="border: none;" allow="clipboard-write; autoplay" allowFullScreen></iframe>
+            </div>
+
+
+        </div>
+
+        <div class="footer">
+            <h1>2026</h1>
+        </div>
+        <a href="../index.html">Марио</a>
+    </center>
+</body>
+
+<!-- 
+<script>
+
+
+    function playRutubeVideos() {
+        var videosBlock = document.querySelector('.content2');
+        if (!videosBlock) return;
+
+        // 1. Плавно скроллим к блоку с видео (по центру экрана)
+        videosBlock.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        // 2. Включаем автовоспроизведение у всех iframe Rutube
+        videosBlock.querySelectorAll('iframe').forEach(function (iframe) {
+            var src = iframe.src;
+            // не добавляем параметр повторно
+            if (!src.includes('autoplay=1')) {
+                iframe.src = src + (src.includes('?') ? '&' : '?') + 'autoplay=1';
+            }
+        });
+    }
+
+
+    function runExistingSonic() {
+        var sonic = document.getElementById('main-sonic');
+        // Находим контейнер с картинками
+        var contentBlock = document.querySelector('.content');
+
+        // Сбрасываем классы анимаций, если кликнули повторно во время бега
+        sonic.classList.remove('run');
+        contentBlock.classList.remove('spin-active');
+        void sonic.offsetWidth; // Магия для перезапуска CSS-анимации
+
+        // Запускаем Соника и кручение картинок
+        sonic.classList.add('run');
+        contentBlock.classList.add('spin-active');
+
+        // Как только анимация бега завершится, убираем эффекты
+        sonic.addEventListener('animationend', function () {
+            sonic.classList.remove('run');
+            contentBlock.classList.remove('spin-active');
+        }, { once: true });
+    }
+
+</script> -->
+
+
+
+
+
+</html>

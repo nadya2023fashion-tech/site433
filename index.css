@@ -1,0 +1,103 @@
+.header,
+.footer {
+    background-color: rgb(255, 0, 0);
+    height: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(253, 253, 253);
+}
+
+
+.content {
+    background-color: rgb(255, 0, 0);
+    height: 700px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content2 {
+    background-color: rgb(255, 0, 0);
+    height: 700px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.text {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .sonic img {
+    position: fixed;
+    width: 200px;
+    bottom: 0px;
+    right: 30px;
+} */
+
+
+
+
+/* Стили для самой жёлтой всплывашки */
+.yellow-tooltip {
+    visibility: hidden;
+    /* По умолчанию скрыта */
+    opacity: 0;
+    /* Полностью прозрачная */
+
+    /* Внешний вид */
+    background-color: #ffd000;
+    /* Яркий жёлтый цвет */
+    color: black;
+    /* Чёрный текст внутри */
+    font-family: Arial, sans-serif;
+    /* Читаемый шрифт, чтобы текст не сливался */
+    font-size: 38px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 8px;
+    /* Закругленные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* Тень для объема */
+
+    /* Позиционирование ровно по центру НАД надписью */
+    position: absolute;
+    bottom: 70%;
+    /* Поднимаем над текстом соника */
+    left: 100%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    /* Чтобы текст не переносился */
+
+    /* Плавное появление */
+    transition: opacity 0.3s ease, visibility 0.3s;
+    z-index: 10;
+}
+
+/* Стрелочка внизу жёлтой всплывашки, указывающая на текст */
+.yellow-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    /* Прижимаем к нижнему краю всплывашки */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: #ffd000 transparent transparent transparent;
+    /* Жёлтый треугольник */
+}
+
+/* Эффект при наведении: показываем всплывашку */
+.sonic-container:hover .yellow-tooltip {
+    visibility: visible;
+    opacity: 1;
+    /* Становится видимой и непрозрачной */
+}
